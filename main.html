@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-analytics.js"></script>
+	<link rel="stylesheet" href="styles.css">
+	<title>CoughLoud</title>
+</head>
+<body>
+	<h1> CoughLoud </h1>
+	<div class = "content">
+		<form id  = "add-cafe-form">
+	<input type="text" name="Name" placeholder="Username">
+	<input type="text" name="EmailId" placeholder="Email Address">
+	<input type="text" name="Password" placeholder="Password">
+	<button> Submit </button>
+	</form>
+	<ul id = "cafe-list"></ul>
+</div>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAZaEtDi1J2gV384G6ctgdsM9d8XBFZUe0",
+    authDomain: "landing-page-f67ce.firebaseapp.com",
+    databaseURL: "https://landing-page-f67ce.firebaseio.com",
+    projectId: "landing-page-f67ce",
+    storageBucket: "landing-page-f67ce.appspot.com",
+    messagingSenderId: "1016444693405",
+    appId: "1:1016444693405:web:7795457387819709485d74",
+    measurementId: "G-VWW67LG559"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const db = firebase.firestore();
+  db.settings({timestampsInSnapshots:true});
+</script>
+<script src = "script.js"></script>
+</body>
+</html>
